@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Quiz de Conhecimentos Gerais</title>
-  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="/css/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
   <link rel="icon" href="/images/logo.png" type="image/png">
@@ -13,7 +13,7 @@
 <body>
   <!-- Tela Inicial -->
   <div id="start-screen" class="screen active card">
-    <img src="../images/logo.png" alt="Logo Quiz" class="logo">
+    <img src="/images/logo.png" alt="Logo Quiz" class="logo">
     <h1>Quiz de Conhecimentos Gerais</h1>
     <p>Teste sua sabedoria!</p>
     <button id="normal-mode">Modo Normal</button>
@@ -30,7 +30,7 @@
     <!-- Header do quiz: progresso + logo + timer -->
     <div class="quiz-header">
       <span id="progress">1 de 20</span>
-      <img src="../images/logo.png" alt="Logo Quiz" class="logo-mini">
+      <img src="/images/logo.png" alt="Logo Quiz" class="logo-mini">
       <span id="timer" class="hidden"></span>
     </div>
 
@@ -40,7 +40,7 @@
 
   <!-- Tela Final -->
 <div id="end-screen" class="screen card hidden">
-  <img src="../images/logo.png" alt="Logo Quiz" class="logo">
+  <img src="/images/logo.png" alt="Logo Quiz" class="logo">
   <h2>Você finalizou o Quiz!</h2>
 
 <div class="scores">
@@ -61,7 +61,7 @@
 
 <!-- Tela Final - Falha no Desafio -->
 <div id="fail-screen" class="screen card hidden">
-  <img src="../images/logo.png" alt="Logo Quiz" class="logo">
+  <img src="/images/logo.png" alt="Logo Quiz" class="logo">
   <h2>Que pena! <br> Você não completou o desafio</h2>
   <p>Tente novamente!</p>
   <div class="scores">
@@ -75,7 +75,7 @@
 
 <!-- Tela Final - Sucesso no Desafio -->
 <div id="success-screen" class="screen card hidden">
-  <img src="../images/logo.png" alt="Logo Quiz" class="logo">
+  <img src="/images/logo.png" alt="Logo Quiz" class="logo">
   <h2>🎉 Parabéns! Você completou o desafio!</h2>
   <p>Você acertou todas as perguntas!</p>
   <div class="scores">
@@ -93,6 +93,6 @@
 
 
   <!-- Importao o controle das telas -->
-  <script type="module" src="../js/main.js"></script>
+  <script type="module" src="/js/main.js"></script>
 </body>
 </html>
