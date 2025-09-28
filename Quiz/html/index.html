@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz de Conhecimentos Gerais</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+  <link rel="icon" href="/images/logo.png" type="image/png">
+
+</head>
+<body>
+  <!-- Tela Inicial -->
+  <div id="start-screen" class="screen active card">
+    <img src="../images/logo.png" alt="Logo Quiz" class="logo">
+    <h1>Quiz de Conhecimentos Gerais</h1>
+    <p>Teste sua sabedoria!</p>
+    <button id="normal-mode">Modo Normal</button>
+    <button id="challenge-mode">Modo Desafio</button>
+  </div>
+
+  <!-- Tela do Quiz -->
+  <div id="quiz-screen" class="screen card hidden">
+    <!-- Barra de progresso -->
+    <div class="progress-container">
+      <div id="progress-bar"></div>
+    </div>
+
+    <!-- Header do quiz: progresso + logo + timer -->
+    <div class="quiz-header">
+      <span id="progress">1 de 20</span>
+      <img src="../images/logo.png" alt="Logo Quiz" class="logo-mini">
+      <span id="timer" class="hidden"></span>
+    </div>
+
+    <h2 id="question-text"></h2>
+    <div id="answers"></div>
+  </div>
+
+  <!-- Tela Final -->
+<div id="end-screen" class="screen card hidden">
+  <img src="../images/logo.png" alt="Logo Quiz" class="logo">
+  <h2>Você finalizou o Quiz!</h2>
+
+<div class="scores">
+  <div class="score-box best">
+    <p>Melhor Score</p>
+    <span id="best-score">0</span>
+  </div>
+
+  <div class="score-box current">
+    <p>Score Atual</p>
+    <span id="current-score">0</span>
+  </div>
+</div>
+
+  <p id="time-info"></p>
+  <button id="restart">Reiniciar Quiz</button>
+</div>
+
+<!-- Tela Final - Falha no Desafio -->
+<div id="fail-screen" class="screen card hidden">
+  <img src="../images/logo.png" alt="Logo Quiz" class="logo">
+  <h2>Que pena! <br> Você não completou o desafio</h2>
+  <p>Tente novamente!</p>
+  <div class="scores">
+    <div class="score-box current">
+      <p>Score Atual</p>
+      <span id="fail-score">0</span>
+    </div>
+  </div>
+  <button id="restart-fail">Reiniciar Quiz</button>
+</div>
+
+<!-- Tela Final - Sucesso no Desafio -->
+<div id="success-screen" class="screen card hidden">
+  <img src="../images/logo.png" alt="Logo Quiz" class="logo">
+  <h2>🎉 Parabéns! Você completou o desafio!</h2>
+  <p>Você acertou todas as perguntas!</p>
+  <div class="scores">
+    <div class="score-box best">
+      <p>Total de Acertos</p>
+      <span id="success-score">20 / 20</span>
+    </div>
+    <div class="score-box time">
+      <p>Tempo utilizado</p>
+      <span id="success-time">0s</span>
+    </div>
+  </div>
+  <button id="restart-success">Reiniciar Quiz</button>
+</div>
+
+
+  <!-- Importao o controle das telas -->
+  <script type="module" src="../js/main.js"></script>
+</body>
+</html>

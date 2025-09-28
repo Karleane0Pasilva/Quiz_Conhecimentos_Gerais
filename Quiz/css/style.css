@@ -1,0 +1,271 @@
+/* Layout geral da página */
+body { 
+  font-family: 'Roboto', sans-serif; 
+  text-align: center; 
+  margin: 0; 
+  padding: 0; 
+  background-color: #1C83DD; 
+  display: flex; 
+  justify-content: center; 
+  align-items: center;    
+  height: 100vh;  
+}
+
+/* Controle de telas */
+.screen { 
+  display: none; 
+}
+.screen:not(.hidden) { 
+  display: block; 
+}
+
+/* Caixa principal do quiz */
+.card { 
+  background: #fff; 
+  color: #000; 
+  max-width: 600px; 
+  width: 85%; 
+  margin: 30px auto; 
+  padding: 40px 50px; 
+  border-radius: 15px; 
+  box-shadow: 0 6px 15px rgba(0,0,0,0.25); 
+  text-align: center; 
+}
+
+/* Logos */
+.logo { 
+  width: 80px; 
+  margin-bottom: 20px; 
+}
+.logo-mini { 
+  width: 50px; 
+  height: auto; 
+}
+
+/* Botões padrão */
+button { 
+  padding: 12px 20px; 
+  margin: 10px; 
+  border: none; 
+  border-radius: 5px; 
+  cursor: pointer; 
+  font-size: 16px; 
+}
+
+/* Botões coloridos */
+.btn-green  { 
+  background: #39B82A; 
+  color: #fff; 
+}
+.btn-yellow { 
+  background: #F9D819; 
+  color: #fff; 
+}
+.btn-blue   { 
+  background: #1C83DD; 
+  color: #fff; 
+}
+.btn-pink   { 
+  background: #E92C88; 
+  color: #fff; 
+}
+
+#normal-mode { 
+  background: #39B82A; 
+  color: #fff; 
+}
+#challenge-mode, 
+#restart { 
+  background: #DE1C0F; 
+  color: #fff; 
+}
+
+/* Área das respostas */
+#answers { 
+  display: grid; 
+  grid-template-columns: 1fr 1fr; 
+  gap: 20px 30px; 
+  margin-top: 30px; 
+}
+#answers button { 
+  padding: 18px; 
+  font-size: 1.1rem; 
+  border-radius: 10px; 
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2); 
+  transition: transform 0.1s ease; 
+}
+#answers button:hover { 
+  transform: scale(1.05); 
+}
+
+/* Feedback das respostas */
+.correct { 
+  background: #39B82A !important; 
+}
+.incorrect { 
+  background: #DE1C0F !important; 
+}
+
+/* Barra de progresso */
+.progress-container { 
+  width: 100%; 
+  background: #eee; 
+  height: 8px; 
+  border-radius: 5px; 
+  margin-bottom: 15px; 
+  overflow: hidden; 
+}
+#progress-bar { 
+  height: 100%; 
+  width: 0%; 
+  background: #1C83DD; 
+  transition: width 0.3s ease; 
+}
+
+/* Cabeçalho do quiz */
+.quiz-header { 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  margin-bottom: 20px; 
+  position: relative; 
+  font-weight: bold; 
+  color: #555; 
+}
+.quiz-header span { 
+  font-size: 0.9rem; 
+}
+.quiz-header #progress { 
+  position: absolute; 
+  left: 10px; 
+}
+.quiz-header #timer { 
+  position: absolute; 
+  right: 10px; 
+}
+
+/* Pergunta */
+#question-text { 
+  font-size: 1.4rem; 
+  font-weight: bold; 
+  margin: 25px 0 20px; 
+}
+
+/* Classe utilitária */
+.hidden { 
+  display: none !important; 
+}
+
+/* Caixa de scores */
+.scores { 
+  display: flex; 
+  justify-content: center; 
+  gap: 30px; 
+  margin: 20px 0; 
+}
+.score-box { 
+  display: flex;  
+  flex-direction: column;      
+  justify-content: center;    
+  align-items: center; 
+  background: #eee; 
+  padding: 20px 25px; 
+  border-radius: 10px; 
+  font-size: 1.2rem; 
+  color: #fff; 
+  min-width: 120px; 
+  min-height: 120px; 
+  text-align: center; 
+  box-shadow: 0 3px 8px rgba(0,0,0,0.2); 
+}
+.score-box.best { 
+  background: #39B82A; 
+}
+.score-box.current { 
+  background: #F9D819; 
+}
+.score-box span { 
+  font-size: 1.6rem; 
+  margin-top: 5px; 
+}
+
+/* Timer */
+#timer { 
+  font-weight: bold; 
+  font-size: 1.3rem; 
+  padding: 10px 18px; 
+  border-radius: 8px; 
+  display: inline-block; 
+  text-align: center; 
+  color: #fff; 
+  min-width: 70px; 
+  box-shadow: 0 3px 8px rgba(0,0,0,0.25); 
+}
+#timer.safe { 
+  background: #39B82A; 
+}
+#timer.warning { 
+  background: #F9D819; 
+  color: #fff; 
+}
+#timer.danger { 
+  background: #DE1C0F; 
+}
+
+/* Telas finais */
+#success-screen, 
+#fail-screen { 
+  text-align: center; 
+  padding: 30px; 
+}
+#success-screen h2 { 
+  color: #39B82A; 
+  font-size: 28px; 
+  margin-bottom: 20px; 
+}
+#fail-screen h2 { 
+  color: #DE1C0F; 
+  font-size: 28px; 
+  margin-bottom: 20px; 
+}
+#success-screen p, 
+#fail-screen p { 
+  font-size: 20px; 
+  margin: 10px 0; 
+}
+#success-screen .highlight, 
+#fail-screen .highlight { 
+  font-size: 24px; 
+  font-weight: bold; 
+  margin-top: 10px; 
+}
+
+/* Botões de reinício nas telas finais */
+#fail-restart, 
+#success-restart, 
+#restart-fail, 
+#restart-success { 
+  display: inline-block; 
+  padding: 12px 25px; 
+  font-size: 16px; 
+  font-weight: bold; 
+  border-radius: 6px; 
+  border: none; 
+  cursor: pointer; 
+  color: white; 
+  background-color: #DE1C0F; 
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2); 
+  transition: background 0.3s ease; 
+}
+#fail-restart:hover, 
+#success-restart:hover, 
+#restart-fail:hover, 
+#restart-success:hover { 
+  background-color: #b3120b; 
+}
+
+/* Caixa de tempo extra no sucesso */
+.score-box.time { 
+  background: #F9D819; 
+  color: #fff; 
+}
